@@ -44,7 +44,11 @@ function adjustAspectRatio() {
 
   let newWidth, newHeight
 
-  if (containerWidth / containerHeight > aspectRatio) {
+  if (aspectRatio === 0) {
+    // If ratio is 0, make child occupy the entire container
+    newWidth = containerWidth
+    newHeight = containerHeight
+  } else if (containerWidth / containerHeight > aspectRatio) {
     // Container is wider than the desired aspect ratio
     newHeight = containerHeight
     newWidth = newHeight * aspectRatio
