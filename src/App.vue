@@ -4,7 +4,7 @@
       <nav class="h-20 py-4 flex-between text-primary">
         <div class="font-semibold text-xl flex-center gap-2">
           <Logo class="h-6 w-6" />
-          Vue Library Starter
+          Vue Aspect Ratio Container
         </div>
         <div class="flex-center gap-4">
           <button

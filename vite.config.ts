@@ -35,8 +35,8 @@ export default defineConfig(({ command, mode }) => {
     userConfig.build = {
       lib: {
         entry: resolve(__dirname, 'packages/index.ts'),
-        name: 'VueLibraryStarter',
-        fileName: 'vue-library-starter'
+        name: 'VueAspectRatioContainer',
+        fileName: 'vue-aspect-ratio-container'
       },
       outDir: 'lib',
       emptyOutDir: true,
@@ -47,11 +47,11 @@ export default defineConfig(({ command, mode }) => {
         output: [
           {
             format: 'cjs',
-            entryFileNames: `vue-library-starter.cjs`
+            entryFileNames: `vue-aspect-ratio-container.cjs`
           },
           {
             format: 'es',
-            entryFileNames: `vue-library-starter.js`,
+            entryFileNames: `vue-aspect-ratio-container.js`,
             preserveModules: false
           }
         ]
