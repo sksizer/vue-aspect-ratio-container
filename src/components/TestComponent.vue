@@ -5,6 +5,9 @@ import { CommonAspectRatios } from '@/CommonAspectRatios'
 
 const containerWidth = ref(600)
 const containerHeight = ref(400)
+
+const containerPadding = ref(0)
+
 const aspectRatio = ref(1)
 const widthMin = ref(100)
 const widthMax = ref(1000)
@@ -50,7 +53,7 @@ onBeforeUnmount(() => {
         <label
           for="width-slider"
           class="block text-sm font-medium text-gray-700"
-          >Width</label
+        >Width</label
         >
         <div class="mt-1 flex flex-col rounded-md shadow-sm">
           <div class="flex justify-between">
@@ -90,7 +93,7 @@ onBeforeUnmount(() => {
         <label
           for="height-slider"
           class="block text-sm font-medium text-gray-700"
-          >Height</label
+        >Height</label
         >
         <div class="mt-1 flex flex-col rounded-md shadow-sm">
           <div class="flex justify-between">
@@ -126,10 +129,33 @@ onBeforeUnmount(() => {
           </div>
         </div>
       </div>
+      <!-- New slider for adjusting the container padding -->
+      <div>
+        <label
+          for="padding-slider"
+          class="block text-sm font-medium text-gray-700"
+        >
+          Padding
+        </label>
+        <div class="mt-1 flex rounded-md shadow-sm">
+          <input
+            type="range"
+            id="padding-slider"
+            v-model="containerPadding"
+            min="0"
+            max="100"
+            class="slider h-2 w-full rounded-full bg-blue-500 outline-none"
+          />
+        </div>
+      </div>
+
+
     </div>
     <div
       class="relative"
-      :style="{ height: containerHeight + 'px', width: containerWidth + 'px' }"
+      :style="{ height: containerHeight + 'px',
+                     width: containerWidth + 'px',
+                      padding: containerPadding + 'px'}"
     >
       <AspectRatioContainer
         :ratio="aspectRatio"
