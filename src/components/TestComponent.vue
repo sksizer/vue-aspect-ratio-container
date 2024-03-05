@@ -53,7 +53,7 @@ onBeforeUnmount(() => {
         <label
           for="width-slider"
           class="block text-sm font-medium text-gray-700"
-        >Width</label
+          >Width</label
         >
         <div class="mt-1 flex flex-col rounded-md shadow-sm">
           <div class="flex justify-between">
@@ -93,7 +93,7 @@ onBeforeUnmount(() => {
         <label
           for="height-slider"
           class="block text-sm font-medium text-gray-700"
-        >Height</label
+          >Height</label
         >
         <div class="mt-1 flex flex-col rounded-md shadow-sm">
           <div class="flex justify-between">
@@ -148,14 +148,14 @@ onBeforeUnmount(() => {
           />
         </div>
       </div>
-
-
     </div>
     <div
       class="relative"
-      :style="{ height: containerHeight + 'px',
-                     width: containerWidth + 'px',
-                      padding: containerPadding + 'px'}"
+      :style="{
+        height: containerHeight + 'px',
+        width: containerWidth + 'px',
+        padding: containerPadding + 'px'
+      }"
     >
       <AspectRatioContainer
         :ratio="aspectRatio"

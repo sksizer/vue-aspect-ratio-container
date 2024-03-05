@@ -41,6 +41,7 @@ function adjustAspectRatio() {
 
   let containerWidth = container.offsetWidth
   let containerHeight = container.offsetHeight
+  logger('Container size:', containerWidth, 'x', containerHeight)
 
   let newWidth, newHeight
 
