@@ -16,6 +16,18 @@ const CommonAspectRatios = [
     width: 1,
     height: 1,
     ratio: 1
+  },
+  {
+    name: '9:16',
+    width: 9,
+    height: 16,
+    ratio: 9 / 16
+  },
+  {
+    name: '3:4',
+    width: 3,
+    height: 4,
+    ratio: 3 / 4
   }
 ]
 
